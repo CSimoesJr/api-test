@@ -52,7 +52,8 @@ app.get("/items", (req, res) => {
 // Rota para obter um item por ID
 app.get("/items/:id", (req, res) => {
   const itemId = parseInt(req.params.id);
-  const item = items.find((item) => item.id === itemId);
+  const item = items.items.find((item) => item.id === itemId);
+  console.log(itemId)
 
   if (!item) {
     return res.status(404).json({ message: "Item não encontrado" });

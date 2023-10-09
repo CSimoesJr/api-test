@@ -61,7 +61,7 @@ app.get("/items/:id", (req, res) => {
   res.json(item);
 });
 
-app.get("/items/:otherId", (req, res) => {
+app.get("/items/fromId/:otherId", (req, res) => {
   res.json(itemsById);
 });
 
